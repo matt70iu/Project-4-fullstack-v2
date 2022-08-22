@@ -6,12 +6,12 @@
 
 <h1>{{ post.title }}</h1>
 <small>By: {{ post.author.first_name}}
-    {{ post.author.last_name}}</small><br />
+    {{ post.author.last_name}} <a href="{% url 'update_post' post.pk %}">Edit</a></small><br />
 <hr>
 <br />
 {{ post.body }}
 
-<br/><br/>
+<br /><br />
 <a href="{% url 'home' %}" class="btn btn-dark"></button>Go Back</a>
 
 {% endblock %}
