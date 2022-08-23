@@ -4,7 +4,7 @@ from django.urls import reverse
 from datetime import datetime, date
 
 
-class Catagory(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
