@@ -4,6 +4,16 @@ from django.urls import reverse
 from datetime import datetime, date
 
 
+class Catagory(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('article-detail', args=(str(self.id)))
+
+
 class Post(models.Model):
     title = models.CharField(max_length=255)
     title_tag = models.CharField(max_length=255)
@@ -11,6 +21,7 @@ class Post(models.Model):
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
     post_time = models.TimeField(auto_now_add=True)
+    catagory = models.CharField(max_length=255, default='general coding')
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
