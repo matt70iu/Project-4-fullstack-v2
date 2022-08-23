@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Create New Category...{% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Create New Category...</h1>
+<br /><br />
+<div class="form-group"></div>
+<form method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <button class="btn btn-secondary">Create New Category</button>
+
+    </div>
+
+    {% else %}
+
+    Action not permitted...
+
+    {% endif %}
+
+    {% endblock %}
