@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'mainblog',
     'signup',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
