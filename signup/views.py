@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.urls import reverse_lazy
-from .forms import RegistrationForm
+from .forms import RegistrationForm, EditProfileForm
 
 
 class UserCreateView(generic.CreateView):
@@ -12,8 +12,8 @@ class UserCreateView(generic.CreateView):
 
 
 class UserEdiView(generic.UpdateView):
-    form_class = UserChangeForm
-    template_name = 'edit_profile.html'
+    form_class = EditProfileForm
+    template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')
 
     def get_object(self):
