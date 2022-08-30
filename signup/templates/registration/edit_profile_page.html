@@ -3,6 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+{% if user.id == profile.user.id %}
 <h1>Edit Profile Page...</h1>
 <br /><br />
 <div class="form-group"></div>
@@ -15,7 +16,11 @@
 
     {% else %}
 
-    Action not permitted...
+    <h2>You are not the correct user to edit this page...</h2>
+
+    {% endif %}
+    {% else %}
+    <h2>Action not permitted...</h2>
 
     {% endif %}
 
