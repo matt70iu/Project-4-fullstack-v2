@@ -13,7 +13,6 @@ class MainProfilePageView(DetailView):
     template_name = 'registration/user_profile.html'
 
     def get_context_data(self, *args, **kwargs):
-        users = Profile.objects.all()
         context = super(MainProfilePageView, self).get_context_data(
             *args,  **kwargs)
 
