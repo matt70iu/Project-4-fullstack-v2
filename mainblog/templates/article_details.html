@@ -25,16 +25,13 @@
 <img src="{{ post.header_image.url }}"><br /><br />
 {% endif %}
 {{ post.body|safe }}
-
-<br /><br />
-<a href="{% url 'home' %}" class="btn btn-dark"></button>Go Back</a>
-<br /></br>
 <hr>
+
 <br />
-{% if user.is_authenticated %}
+
 <form action="{% url 'like_post' post.pk %}" method="POST">
   {% csrf_token %}
-
+  {% if user.is_authenticated %}
   {% if liked %}
   <button type="submit" , name="post_id" , value="{{ post.id }}" , class="btn btn-danger btn-sm">Unlike</button>
   {% else %}
@@ -47,7 +44,25 @@
 
 </form>
 
-<br /><br />
+<br/>
+<hr>
+<h2>Comments...</h2>
+<br/>
+{% if not post.comments.all %}
+<p>No Comments yet...<a href="#">Add One...</a></p>
+{% else %}
+{% for comment in post.comments.all %}
+<strong>
+  {{ comment.name }} -
+  {{ comment.date_added }}
+</strong>
+<br />
+{{ comment.body }}
+<br/><br/>
+<hr>
+{% endfor %}
+{% endif %}
+<br /> <br />
 <div class="card mb-3">
   <div class="row no-gutters">
     <div class="col-md-2">
@@ -64,7 +79,7 @@
           {{ post.author.last_name}} </h5>
         <p class="card-text text-muted">
           {% if post.author.profile.website_url %}
-          <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile Page</a> 
+          <a href="{% url 'show_profile_page' post.author.profile.id %}">Profile Page</a>
           <a href="{{ post.author.profile.website_url }}">| Website</a> |
           {% endif %}
           {% if post.author.profile.facebook_url %}
