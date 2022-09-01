@@ -4,6 +4,7 @@ from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 
 # Create your views here.
@@ -76,6 +77,7 @@ class NewCommentView(CreateView):
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
+        messages.add_message(self.request, messages.INFO, 'hello world')
         return super().form_valid(form)
 
     success_url = reverse_lazy('home')
