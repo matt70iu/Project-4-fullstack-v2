@@ -77,7 +77,7 @@ class NewCommentView(CreateView):
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
-        messages.add_message(self.request, messages.INFO, 'hello world')
+        messages.add_message(self.request, messages.INFO, 'Comment added successfully')
         return super().form_valid(form)
 
     success_url = reverse_lazy('home')
