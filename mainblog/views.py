@@ -5,6 +5,7 @@ from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 # Create your views here.
@@ -63,11 +64,12 @@ class ArticleDetailView(DetailView):
         return context
 
 
-class NewPostView(CreateView):
+class NewPostView(SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'new_post.html'
-    # fields = '__all__'
+    success_url = reverse_lazy('home')
+    success_message = "New post has beem created!"
 
 
 class NewCommentView(CreateView):
@@ -77,25 +79,31 @@ class NewCommentView(CreateView):
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
-        messages.add_message(self.request, messages.INFO, 'Comment added successfully')
+        messages.add_message(self.request, messages.INFO,
+                             'Comment added successfully')
         return super().form_valid(form)
 
     success_url = reverse_lazy('home')
 
 
-class NewCategoryView(CreateView):
+class NewCategoryView(SuccessMessageMixin, CreateView):
     model = Category
     template_name = 'new_category.html'
+    success_url = reverse_lazy('home')
+    success_message = "New Catagory has been created!"
     fields = '__all__'
 
 
-class EditPostView(UpdateView):
+class EditPostView(SuccessMessageMixin, UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
+    success_url = reverse_lazy('home')
+    success_message = "Post has been successfully updated!"
 
 
-class DeletePostView(DeleteView):
+class DeletePostView(SuccessMessageMixin, DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+    success_message = "Post has been successfully deleted!"

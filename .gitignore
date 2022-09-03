@@ -2,7 +2,7 @@ core.Microsoft*
 core.mongo*
 core.python*
 env.py
-script.js
+blank.html
 __pycache__/
 *.py[cod]
 node_modules/
