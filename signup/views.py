@@ -6,6 +6,8 @@ from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from .forms import RegistrationForm, EditProfileForm, PasswordChangedForm, ProfilePageForm
 from mainblog.models import Profile
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class CreateProfilePageView(CreateView):
@@ -15,15 +17,18 @@ class CreateProfilePageView(CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        messages.add_message(self.request, messages.INFO,
+                             'Profile created successfully')
         return super().form_valid(form)
 
 
-class EditProfilePageView(generic.UpdateView):
+class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
     model = Profile
     template_name = 'registration/edit_profile_page.html'
     fields = ['bio', 'profile_picture', 'website_url',
               'facebook_url', 'instagram_url', 'twitter_url']
     success_url = reverse_lazy('home')
+    success_message = "Your profile has been edited successfully!"
 
 
 class MainProfilePageView(DetailView):
@@ -40,9 +45,10 @@ class MainProfilePageView(DetailView):
         return context
 
 
-class PasswordsChangeView(PasswordChangeView):
+class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     form_class = PasswordChangedForm
-    success_url = reverse_lazy('password_success')
+    success_url = reverse_lazy('home')
+    success_message = "Your password has been changed successfully!"
 
 
 def password_success(request):
