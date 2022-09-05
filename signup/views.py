@@ -51,20 +51,18 @@ class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     success_message = "Your password has been changed successfully!"
 
 
-def password_success(request):
-    return render(request, 'registration/password_success.html', {})
-
-
-class UserCreateView(generic.CreateView):
+class UserCreateView(SuccessMessageMixin, generic.CreateView):
     form_class = RegistrationForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
+    success_message = "Your account has been successfully registered, please login."
 
 
-class UserEdiView(generic.UpdateView):
+class UserEdiView(SuccessMessageMixin, generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')
+    success_message = "Your account info has been succesfully edited"
 
     def get_object(self):
         return self.request.user
