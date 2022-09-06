@@ -2,12 +2,18 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic import DetailView, CreateView
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.views import PasswordChangeView, LoginView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from .forms import RegistrationForm, EditProfileForm, PasswordChangedForm, ProfilePageForm
 from mainblog.models import Profile
 from django.contrib import messages
-from django.contrib.messages.views import SuccessMessageMixin
+
+
+class MyLoginView(SuccessMessageMixin, LoginView):
+    template_name = 'registration/login.html'
+    success_url = reverse_lazy('home')
+    success_message = "You have successfully logged in"
 
 
 class CreateProfilePageView(CreateView):
