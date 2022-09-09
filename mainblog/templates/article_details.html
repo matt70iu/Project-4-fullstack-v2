@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{ post.title_tag }}{% endblock %}
-
 {% block content %}
 
 <h1>{{ post.title }}</h1>
@@ -66,13 +64,13 @@
           <a href="{{ post.author.profile.website_url }}">| Website</a> |
           {% endif %}
           {% if post.author.profile.facebook_url %}
-          <a href="{{ post.author.profile.facebook_url }}">Facebook </a>|
+          <a href="{{ post.author.profile.facebook_url }}" target="_blank">Facebook </a>|
           {% endif %}
           {% if post.author.profile.instagram_url %}
-          <a href="{{ post.author.profile.instagram_url }}">Instagram </a>|
+          <a href="{{ post.author.profile.instagram_url }}" target="_blank">Instagram </a>|
           {% endif %}
           {% if post.author.profile.twitter_url %}
-          <a href="{{ post.author.profile.twitter_url }}">Twitter</a>
+          <a href="{{ post.author.profile.twitter_url }}" target="_blank">Twitter</a>
         </p>{% endif %}
         <p class="card-text">{{ post.author.profile.bio }}</p>
       </div>
