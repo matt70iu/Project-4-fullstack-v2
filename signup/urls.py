@@ -15,6 +15,7 @@ urlpatterns = [
     path('create_user_profile_page/', CreateProfilePageView.as_view(),
          name='create_profile_page'),
     path('my_login', views.my_login, name="login"),
+    path('my_logout', views.my_logout, name="logout"),
 
 
 

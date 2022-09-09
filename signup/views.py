@@ -21,11 +21,17 @@ def my_login(request):
             messages.success(request, "You have been logged in successfully")
             return redirect('home')
         else:
-            messages.success(request, "There was an error, please try again")
+            messages.success(request, "Invalid details, please try again")
             return redirect('login')
 
     else:
         return render(request, 'registration/login.html', {})
+
+
+def my_logout(request):
+    logout(request)
+    messages.success(request, "You have been logged out successfully")
+    return redirect('home')
 
 
 class CreateProfilePageView(CreateView):
