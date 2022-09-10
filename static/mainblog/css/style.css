@@ -12,6 +12,22 @@ footer {
     height: 60px; 
 }
 
+
+
+a {
+    color:  #f57542;
+
+}
+
+.card-title {
+    color: black;
+
+}
+
+.btn-site-theme {
+    background-color: #f57542;
+}
+
 #msg {
     background-color: #f57542;
     text-align: center;
