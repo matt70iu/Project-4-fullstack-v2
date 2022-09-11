@@ -82,7 +82,7 @@ class UserCreateView(SuccessMessageMixin, generic.CreateView):
     success_message = "Your account has been successfully registered, please login."
 
 
-class UserEdiView(SuccessMessageMixin, generic.UpdateView):
+class UserEditView(SuccessMessageMixin, generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')

@@ -1,11 +1,11 @@
 from django.urls import path
-from .views import UserCreateView, UserEdiView, PasswordsChangeView, MainProfilePageView, EditProfilePageView, CreateProfilePageView
+from .views import UserCreateView, UserEditView, PasswordsChangeView, MainProfilePageView, EditProfilePageView, CreateProfilePageView
 from django.contrib.auth import views as auth_views
 from . import views
 
 urlpatterns = [
     path('register/', UserCreateView.as_view(), name='create_user'),
-    path('edit_profile/', UserEdiView.as_view(), name='edit_profile'),
+    path('edit_profile/', UserEditView.as_view(), name='edit_profile'),
     path('password/', PasswordsChangeView.as_view(
         template_name='registration/change-password.html')),
     path('<int:pk>/profile/', MainProfilePageView.as_view(),
