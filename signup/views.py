@@ -1,17 +1,21 @@
+''' Required imports
+'''
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.views.generic import DetailView, CreateView
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
-from django.contrib.auth.views import PasswordChangeView, LoginView
+from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
-from .forms import RegistrationForm, EditProfileForm, PasswordChangedForm, ProfilePageForm
 from mainblog.models import Profile
-from django.contrib import messages
+from .forms import RegistrationForm, EditProfileForm, PasswordChangedForm,\
+    ProfilePageForm
 
 
 def my_login(request):
+    '''Checks username/password is valid when logging in
+    '''
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
@@ -29,12 +33,17 @@ def my_login(request):
 
 
 def my_logout(request):
+    '''Logs user out with success message
+    '''
     logout(request)
     messages.success(request, "You have been logged out successfully")
     return redirect('home')
 
 
 class CreateProfilePageView(CreateView):
+    ''' Renders user profile creation tamplate
+    and saves user profile data with success message.
+    '''
     model = Profile
     form_class = ProfilePageForm
     template_name = "registration/create_user_profile_page.html"
@@ -47,6 +56,9 @@ class CreateProfilePageView(CreateView):
 
 
 class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
+    ''' Renders user edit profile template
+    and saves data with success message
+    '''
     model = Profile
     template_name = 'registration/edit_profile_page.html'
     fields = ['bio', 'profile_picture', 'website_url',
@@ -79,7 +91,8 @@ class UserCreateView(SuccessMessageMixin, generic.CreateView):
     form_class = RegistrationForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
-    success_message = "Your account has been successfully registered, please login."
+    success_message = "Your account has been successfully registered please \
+     login."
 
 
 class UserEditView(SuccessMessageMixin, generic.UpdateView):
