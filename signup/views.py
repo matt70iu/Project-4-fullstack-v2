@@ -68,6 +68,8 @@ class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
 
 
 class MainProfilePageView(DetailView):
+    '''Renders user profile info'''
+
     model = Profile
     template_name = 'registration/user_profile.html'
 
@@ -82,12 +84,16 @@ class MainProfilePageView(DetailView):
 
 
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
+    '''Renders password change form, confirms with success message'''
+
     form_class = PasswordChangedForm
     success_url = reverse_lazy('home')
     success_message = "Your password has been changed successfully!"
 
 
 class UserCreateView(SuccessMessageMixin, generic.CreateView):
+    '''Renders user registration form, confirms with success message'''
+
     form_class = RegistrationForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
@@ -96,10 +102,12 @@ class UserCreateView(SuccessMessageMixin, generic.CreateView):
 
 
 class UserEditView(SuccessMessageMixin, generic.UpdateView):
+    '''Renders user profile edit form, confirms with success message'''
+
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')
     success_message = "Your account info has been succesfully edited"
 
     def get_object(self):
-        return self.request.user
+        return self.model.objects.get(pk=self.request.user.pk)
