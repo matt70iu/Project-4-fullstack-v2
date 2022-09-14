@@ -110,4 +110,4 @@ class UserEditView(SuccessMessageMixin, generic.UpdateView):
     success_message = "Your account info has been succesfully edited"
 
     def get_object(self):
-        return self.model.objects.get(pk=self.request.user.pk)
+        return self.request.user

@@ -1,14 +1,24 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+'''Required imports
+'''
+
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm,\
+    PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
 from mainblog.models import Profile
 
 
 class ProfilePageForm(forms.ModelForm):
+
+    '''Renders user edit profile form
+    '''
     class Meta:
+
+        '''Renders user edit profile form
+        '''
         model = Profile
-        fields = ('bio', 'profile_picture', 'website_url',
-                'facebook_url', 'instagram_url', 'twitter_url')
+        fields = ('bio', 'profile_picture', 'website_url', 'facebook_url',
+                  'instagram_url', 'twitter_url')
 
         widgets = {
             'bio': forms.Textarea(attrs={'class': 'form-control'}),
@@ -21,14 +31,22 @@ class ProfilePageForm(forms.ModelForm):
 
 
 class RegistrationForm(UserCreationForm):
+
+    '''Renders fields for user registration form
+    '''
     email = forms.EmailField(widget=forms.EmailInput(
         attrs={'class': 'form-control'}))
     first_name = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
     last_name = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
 
     class Meta:
+
+        '''Renders password change form
+        '''
         model = User
         fields = ('username', 'first_name', 'last_name',
                   'email', 'password1', 'password2')
@@ -42,26 +60,40 @@ class RegistrationForm(UserCreationForm):
 
 
 class EditProfileForm(UserChangeForm):
+
+    '''Renders user edit form
+    '''
     email = forms.EmailField(widget=forms.EmailInput(
         attrs={'class': 'form-control'}))
     first_name = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
     last_name = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
     username = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
     last_login = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
     date_joined = forms.CharField(
-        max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+        max_length=100, widget=forms.TextInput
+        (attrs={'class': 'form-control'}))
 
     class Meta:
+
+        '''Renders user registraion/edit form
+        '''
         model = User
         fields = ('username', 'first_name', 'last_name',
                   'last_login', 'date_joined')
 
 
 class PasswordChangedForm(PasswordChangeForm):
+
+    '''Renders user password change form
+    '''
     old_password = forms.CharField(widget=forms.PasswordInput(
         attrs={'class': 'form-control', 'type': 'password'}))
     new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(
@@ -70,5 +102,8 @@ class PasswordChangedForm(PasswordChangeForm):
         attrs={'class': 'form-control', 'type': 'password'}))
 
     class Meta:
+
+        '''Renders user password change form
+        '''
         model = User
         fields = ('old_password', 'new_password1', ' new_password2')
