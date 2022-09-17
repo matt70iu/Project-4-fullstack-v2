@@ -1,21 +1,17 @@
+''' Required imports'''
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView,\
- DeleteView
-from .models import Post, Category, Comment
-from .forms import PostForm, EditForm, CommentForm
+    DeleteView
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-
-
-# Create your views here.
-# def home(request):
-#     context = {}
-#     return render(request, 'home.html', context)
+from .models import Post, Category, Comment
+from .forms import PostForm, EditForm, CommentForm
 
 
 def LikeView(request, pk):
+    ''' Asigns/removes like from post'''
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
     if post.likes.filter(id=request.user.id).exists():
@@ -29,6 +25,7 @@ def LikeView(request, pk):
 
 
 class HomeView(ListView):
+    '''renders home page posts vew'''
     model = Post
     template_name = 'home.html'
     ordering = ['-post_date', '-post_time']
@@ -41,11 +38,15 @@ class HomeView(ListView):
 
 
 def CategoryView(request, cats):
+    '''renders posts filtered by catagory on homepage'''
+
     category_posts = Post.objects.filter(category=cats)
-    return render(request, 'categories.html', {'cats': cats.title(), 'category_posts': category_posts})
+    return render(request, 'categories.html',
+                  {'cats': cats.title(), 'category_posts': category_posts})
 
 
 class ArticleDetailView(DetailView):
+    '''Renders main post page'''
     model = Post
     template_name = 'article_details.html'
 
@@ -66,6 +67,7 @@ class ArticleDetailView(DetailView):
 
 
 class NewPostView(SuccessMessageMixin, CreateView):
+    '''Renders create post page'''
     model = Post
     form_class = PostForm
     template_name = 'new_post.html'
@@ -74,6 +76,7 @@ class NewPostView(SuccessMessageMixin, CreateView):
 
 
 class NewCommentView(CreateView):
+    '''Renders new comment page'''
     model = Comment
     form_class = CommentForm
     template_name = 'new_comment.html'
@@ -88,6 +91,7 @@ class NewCommentView(CreateView):
 
 
 class NewCategoryView(SuccessMessageMixin, CreateView):
+    '''Renders template to add catagory'''
     model = Category
     template_name = 'new_category.html'
     success_url = reverse_lazy('home')
@@ -96,6 +100,7 @@ class NewCategoryView(SuccessMessageMixin, CreateView):
 
 
 class EditPostView(SuccessMessageMixin, UpdateView):
+    '''Renders edit post view template'''
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
@@ -104,6 +109,7 @@ class EditPostView(SuccessMessageMixin, UpdateView):
 
 
 class DeletePostView(DeleteView):
+    '''Renders delete post view'''
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
