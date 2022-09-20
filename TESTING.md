@@ -124,6 +124,9 @@ The user will then be redirected to the homepage with a confirmation message tha
 
 ![Edit-post-success](screenshots/edit-post-success.png)
 
+During testing, I discovered that the edit button was in a default bootstrap colour, changed colour to suit site theme.
+Other than this, the app behaved as expected.
+
 ## Delete a post
 
 The purpose of this test is to confirm that a user can delete a post that they created, while logged in.
