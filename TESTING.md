@@ -95,6 +95,63 @@ The create post form also contains validation, requiring a minmium of a post tit
 
 During testing, I discovered a spelling mistake in the success message, which I have now corrected, other than that, the app behaved as expected.
 
+## Edit a post
+
+The purpose of this test is to confirm that a user can edit a post that they created.
+
+A post can be edited in one of two ways.
+
+From the homepage, the user can select Edit link attached to the post they wish to edit.
+
+![Edit-post-home](screenshots/edit-post-home.png)
+![Edit-post-home-link](screenshots/edit-post-link-home.png)
+
+They can also select the edit link from the post/article detail page'
+
+![Article-detail-edit](screenshots/article-detail-edit-post.png)
+![Article-detail-edit-link](screenshots/article-detail-edit-post-link.png)
+
+The user will then be presented with an Edit Post page.
+
+![Edit-post-page-1](screenshots/edit-post-page-1.png)
+![Edit-post-page-2](screenshots/edit-post-page-2.png)
+
+The user can now make their changes to the relevent post and then click the Edit Post button at the bottom of the page.
+
+![Edit-post-button](screenshots/edit-post-button-2.png)
+
+The user will then be redirected to the homepage with a confirmation message that the edit was successful.
+
+![Edit-post-success](screenshots/edit-post-success.png)
+
+## Delete a post
+
+The purpose of this test is to confirm that a user can delete a post that they created, while logged in.
+
+A post can be deleted in one of two ways.
+
+From the homepage, the user can select the delete link attached to the post they wish to delete. 
+
+![Delete-post-home](screenshots/delete-post-home.png)
+![Delete-post-home-link](screenshots/delete-post-home-link.png)
+
+They can also choose the delete link from within the post itself.
+
+![Article-detail-delete](screenshots/article-detail-delete.png)
+![Article-detail-delete-link](screenshots/article-detail-delete-link.png)
+
+Which ever option the user chooses, they will be directed to a Delete Post page.
+
+![Delete-post-page](screenshots/delete-post-page.png)
+![Delete-post-button](screenshots/delete-post-button.png)
+
+The user then needs to click delete post and they will be redirected to the homepage with a message confirming successful deletion.
+
+![Delete-success](screenshots/delete-success.png)
+
+I can confirm after this test, that the app behaved as expected.
+
+
 ## Like/unlike post
 
 The purpose of this test is to confirm that a logged in user is able to like/unlike a post.
@@ -136,6 +193,29 @@ They will then be brought back to the home page with a success message.
 ![Add-comment-success](screenshots/add-comment-success.png)
 
 During testing, I discovered that the add comment button was still the default bootstrap colour. I have ammended the add comment template to correct this, all else went as expected.
+
+## Create a new category
+
+The purpose of this test is to ensure a user can create a new category when logged in.
+
+From the homepage, the user must select Create New Category.
+
+![Create-new-category-home](screenshots/create-new-category-home.png)
+![Create-new-category-button](screenshots/create-new-category-button.png)
+
+They will then be presented with the create new category page.
+
+![Create-new-category-page](screenshots/create-new-category-page.png)
+
+The user then simply needs to type a category name and then click Create New Categoey.
+
+![Create-new-category-button-2](screenshots/create-new-category-button-2.png)
+
+The user will then be redirected back to the homepage with a success message confirming that the new category has been added.
+
+![New-category-success](screenshots/new-category-success-message.png)
+
+I can confirm that the app behaved as expected after this test.
 
 
 
