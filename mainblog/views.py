@@ -72,7 +72,7 @@ class NewPostView(SuccessMessageMixin, CreateView):
     form_class = PostForm
     template_name = 'new_post.html'
     success_url = reverse_lazy('home')
-    success_message = "New post has beem created!"
+    success_message = "New post has been created!"
 
 
 class NewCommentView(CreateView):
