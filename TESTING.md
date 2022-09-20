@@ -89,7 +89,56 @@ The user will then be redirected back to the home page with a success message.
 
 ![New-post-created](screenshots/new-post-has-been-created.png)
 
+The create post form also contains validation, requiring a minmium of a post title, title tag and snippet.
+
+![New-post-validation](screenshots/new-post-validation.png)
+
 During testing, I discovered a spelling mistake in the success message, which I have now corrected, other than that, the app behaved as expected.
+
+## Like/unlike post
+
+The purpose of this test is to confirm that a logged in user is able to like/unlike a post.
+
+In order for the user to like/unlike a post, they must first select the post they wish to like/unlike.
+
+![Select-post-like/unlike](screenshots/select-post-like-unlike.png)
+
+They will then be presented with the main post/article body.
+
+![Article-detail-like-unlike](screenshots/article-detail-like-unlike.png)
+
+At the bottom of the article, the user simply needs to click the like button in order to register their like.
+
+![Like-button](screenshots/like-button.png)
+![Like-button-clicked](screenshots/like-button-clicked.png)
+
+I can confirm after this test, that the app behaved as expected.
+
+## Comment on a post
+
+The purpose of this test is to confirm that a user can add a comment to a post.
+
+Within any post, the user can add a comment by clicking on the Add One... link at the bottom of the page.
+
+![Article-detail-add-comment](screenshots/article-detail-comment.png)
+![Article-detail-add-comment-link](screenshots/add-comment-link.png)
+
+The user will then be brought to the Add Comment page.
+
+![Add-comment-page](screenshots/add-comment-page.png)
+
+The user can then fill out their comment and submit by clicking the Add Comment button.
+
+![Add-comment-button](screenshots/add-comment-button.png)
+
+They will then be brought back to the home page with a success message.
+
+![Add-comment-success](screenshots/add-comment-success.png)
+
+During testing, I discovered that the add comment button was still the default bootstrap colour. I have ammended the add comment template to correct this, all else went as expected.
+
+
+
 
 
 
