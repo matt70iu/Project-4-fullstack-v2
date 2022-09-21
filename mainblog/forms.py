@@ -28,7 +28,7 @@ class PostForm(forms.ModelForm):
             'category': forms.Select
             (choices=choice_list, attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
-            'snippet': forms.Textarea(attrs={'class': 'form-control'}),
+            'snippet': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 
