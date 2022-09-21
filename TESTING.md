@@ -6,7 +6,7 @@ The purpose of this test is to ensre that the user can log in and out with a suc
 
 The user is presented with the homepage which contains all posts in a list format.
 
-![Home-page](screenshots/testing/homepage.png)
+![Home-page](screenshots/home-page.png)
 
 To login, the user must select the login button.
 
