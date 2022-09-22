@@ -29,7 +29,7 @@ Login page
 
 Create new category page
 
-![Edit-profile-page-1](screenshots/wireframes/edit-profile-page-1png.png)
+![Edit-profile-page-1](screenshots/wireframes/edit-profile-page-1.png)
 ![Edit-profile-page-2](screenshots/wireframes/edit-profile-page-2.png)
 
 Edit profile page
@@ -85,3 +85,45 @@ They will then be brought to a Create New Category Page where they can fill out 
 
 ![Create-new-category-page](screenshots/create-new-category-page.png)
 ![Create-new-category-button](screenshots/create-new-category-button-2.png)
+
+### Account/Profile Features
+
+Under the dropdown profile menu on the right hand side, a user can choose to edit their settings. They are then brought to a page which displays text fields of username, first name, last name, last login and email.
+
+![Edit-settings-page-1](screenshots/edit-settings-page-1.png)
+![Edit-settings-page-2](screenshots/edit-settings-page-2.png)
+
+The user can then choose to update any of these settings by clinking the Update Settings button, although, the last login, date joined and email fields must be populated. They will then be redirected to the homepage with a success message.
+
+There is also a change password link, which will bring the user to a page to allow them to update their password.
+
+![Change-password-form](screenshots/change-password-form.png)
+
+Again, they may do so by simply clicking the change password button. They will then be redirected to the homepage with a success message.
+
+While under in the profile menu, there is also the option to Edit Profile Page. This will then being the user to a page which will allow them to change various aspects of their profile, such as their bio, picture, website, instalgram, facebook and twitter urls.
+
+![Edit-profile-page-1](screenshots/edit-profile-page-1.png)
+![Edit-profile-page-2](screenshots/edit-profile-page-2.png)
+
+A user can choose to leave any of these fields blank if they so wish, with the exception of the bio. Once update profile is clicked, the user will then be redirected to the homepage with a success message.
+
+There is also the option to Show Profile page under the user profile menu. They will then be able to view a summary of all their public profile information they have provided, including name, picture, website, facebook, instagram and twitter, as well as their bio.
+
+![Profile-summary-page](screenshots/profile-summary-page.png)
+
+As is the case in the article detail page, the profile summary page will not display info or links for any areas in the users profile that may have been left blank.
+
+Finally, for this menu, the user can also choose to logout, which will log them out and redirect them back to the homepage with a success message in a logged out state.
+
+### Other Features
+
+Ck Editor
+
+This gives the user much more variety and features when creating a post, such as the ability to add formatting, links, images etc to their posts.
+
+![Ck-editor](screenshots/ck-editor.png)
+
+In relation to this feature however, I have been experiencing difficulties getting this editor to render properly in Heroku. This is a bug which I have yet to resolve, but hope to before project submission. 
+
+If this bug cannot be resolved, I will simply replace with a text fields, although, this would be a setback for the project in terms of features.
