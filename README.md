@@ -34,11 +34,20 @@ Create new category page
 
 Edit profile page
 
-## User stories
+## User stories/planning
 
 I used Github's story boards feature to plan in stages while building the site. Although I did find myself needing to add and or edit issues to the board at various stages throughout the project, I did find it extremely useful in temms of planning and implemintation.
 
-[Link to Github User Stories for project](https://github.com/users/matt70iu/projects/4)
+![User-stories-screenshot](screenshots/user-stories-screenshot.png)
+
+In building of the site, I did plan to use many external resourses to both improve my knowledge/abilites, as well as provide the site with some extra features.
+
+### Models
+
+As per the project requirements, the project must include CRUD functionality, so to that end my main models are going to consist of 4 main headings of profile, category, post and comment, some of which would require additional funtions within.
+
+As well as what was included in the youtube tutorials and other reousrses that would assist me in building this project, I also wanted to add a time field to the post model as I feel it would be of beneifit for the user to know the time, as well as the date of a post.
+
 
 ## Features
 
@@ -124,6 +133,10 @@ This gives the user much more variety and features when creating a post, such as
 
 ![Ck-editor](screenshots/ck-editor.png)
 
-In relation to this feature however, I have been experiencing difficulties getting this editor to render properly in Heroku. This is a bug which I have yet to resolve, but hope to before project submission. 
+In relation to this feature however, I have been experiencing difficulties getting this editor to render properly in Heroku.
+
+![Ck-editor-bug](screenshots/ck-editor-bug.png)
+
+ This is a bug which I have yet to resolve, but hope to before project submission. 
 
 If this bug cannot be resolved, I will simply replace with a text fields, although, this would be a setback for the project in terms of features.
