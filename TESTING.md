@@ -232,15 +232,17 @@ I selected Python and was presented with the filtered results.
 
 There was a couple of unexpected issues that came up here.
 
-- The  tags for the main article body are still showing.
+- The tags for the main article body are still showing.
 
 ![p-tags-showing](screenshots/p=tags-showing.png)
+
+- Issue with p tags showing rectified by inserting safe tag into template.
 
 - The user is also presented with the option to edit/delete posts which they didn't create, although when they do this, they are told the action is not permitted.
 
 ![action-not-pernitted](screenshots/action-not-permitted.png)
 
-- The post snippet is also not displaying as it should be in the filtered posts.
+
 
 
 
