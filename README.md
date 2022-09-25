@@ -150,3 +150,38 @@ If this bug cannot be resolved, I will simply replace with a text fields, althou
 - Allow user to express other opinions rather than just a like an unlike button. Could maybe have a whatsapp/facebook messenger style list of emojis.
 
 - A few visual tweeks to various visual elements of the site such as the view profile page for example, rather than just having a simple rectangle with profile info, round off the photo and improve the layout of the page etc.
+
+### Technologies Used
+
+- Python 
+
+- Django
+
+- HTML
+
+- CSS
+
+- Javascript 
+
+- Gitpod (to build project)
+
+- Heroku, github and cloudinary (for deployment)
+
+### Testing
+
+I have completed a seperate test file [here](TESTING.md) which goes through all testing completed for this project.
+
+### Validator testing
+
+##### Mainblog app:
+
+![Main-blog-admin](screenshots/validator/main-blog-admin.png)
+
+Main blog admin.py
+
+![Main-blog-apps](screenshots/validator/main-blog-apps.png)
+
+Main blog apps.py
+
+
+
