@@ -31,10 +31,10 @@
   {% csrf_token %}
   {% if user.is_authenticated %}
   {% if liked %}
-  <button type="submit" , name="post_id" , value="{{ post.id }}" , class="btn btn-danger btn-sm">Unlike</button>
+  <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-danger btn-sm">Unlike</button>
   {% else %}
 
-  <button type="submit" , name="post_id" , value="{{ post.id }}" , class="btn btn-site-theme btn-sm">Like</button>
+  <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-site-theme btn-sm">Like</button>
   {% endif %}
 
   {% endif %}
@@ -48,9 +48,9 @@
   <div class="row no-gutters">
     <div class="col-md-2">
       {% if  post.author.profile.profile_picture %}
-      <img src="{{ post.author.profile.profile_picture.url }}" class="card-img">
+      <img src="{{ post.author.profile.profile_picture.url }}" class="card-img" alt="profile-card">
       {% else %}
-      <img src="{% static 'mainblog/images/default_profile.jpg' %}" class="card-img">
+      <img src="{% static 'mainblog/images/default_profile.jpg' %}" class="card-img" alt="profile-card">
       {% endif %}
     </div>
     <div class="col-md-10">

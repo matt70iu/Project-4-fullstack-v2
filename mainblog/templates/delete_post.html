@@ -3,26 +3,25 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    {% if user.id == post.author.id %}
-    <h1>Delete Post...</h1>
-    <br /><br />
-    <h4>Delete: {{ post.title }}</h4>
-    <div class="form-group"></div>
-    <form method="POST">
-        {% csrf_token %}
-        </br>
-        <button class="btn-site-theme">Delete Post!</button>
+{% if user.id == post.author.id %}
+<h1>Delete Post...</h1>
+<br /><br />
+<h4>Delete: {{ post.title }}</h4>
+<div class="form-group"></div>
+<form method="POST">
+    {% csrf_token %}
+    <button class="btn-site-theme">Delete Post!</button>
+</form>
 
-        </div>
-        {% else %}
-        Action not permitted...
-        {% endif %}
+{% else %}
+Action not permitted...
+{% endif %}
 
-    {% else %}
+{% else %}
 
-    Action not permitted...
+Action not permitted...
 
-    {% endif %}
+{% endif %}
 
 
-    {% endblock %}
+{% endblock %}

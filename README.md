@@ -233,7 +233,7 @@ Create user profile.html
 
 - Errors on this result caused by imported django UserChangeForm. Confirmed with CI tutor Alex that this was ok once documented.
 
-Edit profile form
+Edit Settings form
 
 ![Login-form](screenshots/validator/login-form.png)
 
@@ -241,7 +241,64 @@ Login form
 
 ![User-registration-form](screenshots/validator/register-page-errors.png)
 
+User registration form
+
 - Errors on this result caused by imported django UserChangeForm. Confirmed with CI tutor Alex that this was ok once documented.
+
+![User-profile-page](screenshots/validator/user-profile-page.png)
+
+### HTML validation (Main blog templates)
+
+![Article-detail-page](screenshots/validator/article-detail-page.png)
+
+Article detail page
+
+![Base-html](screenshots/validator/base-html.png)
+
+- These errors are caused by bootstrap template/Python code in doc.
+
+Base html
+
+![Categories-page](screenshots/validator/categories-html.png)
+
+Categories page
+
+![Delete-post-page](screenshots/validator/delete-post-html.png)
+
+- Errors caused by imported Deleteview as per above.
+
+Detete post page
+
+![Home-page](screenshots/validator/home-page-1.png)
+![Home-page-2](screenshots/validator/home-page-2.png)
+
+Home page html
+
+![Create-new-category-page](screenshots/validator/new-category-page.png)
+
+New category page
+
+![New-comment-page](screenshots/validator/new-comment-page.png)
+
+New comment page
+
+![New-post-page-1](screenshots/validator/new-post-1.png)
+![New-post-page-2](screenshots/validator/new-post-2.png)
+
+- Errors caused by imported Createview as per above.
+
+New post page
+
+![Update-post-page](screenshots/validator/edit-post-page.png)
+
+- Errors caused by imported Update view as per above.
+
+Update post page
+
+
+
+
+
 
 
 

@@ -4,23 +4,23 @@
 
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
-    <h1>Edit Post...</h1>
-    <br /><br />
-    <div class="form-group"></div>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button class="btn btn-site-theme">Edit Post</button>
+<h1>Edit Post...</h1>
+<br /><br />
+<div class="form-group"></div>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+    <button class="btn btn-site-theme">Edit Post</button>
+</form>
 
-        </div>
-        {% else %}
-        Action not permitted...
-        {% endif %}
+{% else %}
+Action not permitted...
+{% endif %}
 {% else %}
 
 Action not permitted...
 
 {% endif %}
 
-    {% endblock %}
+{% endblock %}
