@@ -167,9 +167,9 @@ If this bug cannot be resolved, I will simply replace with a text fields, althou
 
 - Heroku, github and cloudinary (for deployment)
 
-### Testing
+# Testing
 
-I have completed a seperate test file [here](TESTING.md) which goes through all testing completed for this project.
+I have completed a seperate test file [here](TESTING.md) which goes through all manual testing completed for this project.
 
 ## Validator testing
 
@@ -218,6 +218,33 @@ Sign up urls.py
 ![Sign-up-views](screenshots/validator/sign-up-views.png)
 
 Sign up views.py
+
+### HTML validation (Sign up templates)
+
+![Change-password-form](screenshots/validator/change-password.png)
+
+Change password.html
+
+![Create-user-profile-form](screenshots/validator/create-user-profile-form.png)
+
+Create user profile.html
+
+![Edit-settings-form](screenshots/validator/edit-user-settings-error.png)
+
+- Errors on this result caused by imported django UserChangeForm. Confirmed with CI tutor Alex that this was ok once documented.
+
+Edit profile form
+
+![Login-form](screenshots/validator/login-form.png)
+
+Login form
+
+![User-registration-form](screenshots/validator/register-page-errors.png)
+
+- Errors on this result caused by imported django UserChangeForm. Confirmed with CI tutor Alex that this was ok once documented.
+
+
+
 
 
 

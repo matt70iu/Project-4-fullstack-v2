@@ -9,14 +9,13 @@
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="btn btn-secondary">Create Profile</button>
+    <button class="btn btn-site-theme">Create Profile</button>
 
-    </div>
+</form>
+{% else %}
 
-    {% else %}
+Action not permitted...
 
-    Action not permitted...
+{% endif %}
 
-    {% endif %}
-
-    {% endblock %}
+{% endblock %}
