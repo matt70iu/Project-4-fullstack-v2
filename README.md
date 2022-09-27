@@ -171,9 +171,9 @@ If this bug cannot be resolved, I will simply replace with a text fields, althou
 
 I have completed a seperate test file [here](TESTING.md) which goes through all testing completed for this project.
 
-### Validator testing
+## Validator testing
 
-##### Mainblog app:
+### Mainblog app:
 
 ![Main-blog-admin](screenshots/validator/main-blog-admin.png)
 
@@ -182,6 +182,46 @@ Main blog admin.py
 ![Main-blog-apps](screenshots/validator/main-blog-apps.png)
 
 Main blog apps.py
+
+![Main-blog-forms](screenshots/validator/main-blog-forms.png)
+
+Main blog forms.py
+
+![Main-blog-models](screenshots/validator/main-blog-models.png)
+
+Main blog models.py
+
+![Main-blog-urls](screenshots/validator/main-blog-urls.png)
+
+Main blog urls.py
+
+![Main-blog-views](screenshots/validator/main-blog-views.py.png)
+
+Main blog views.py
+
+### Signup app:
+
+![Sign-up-apps](screenshots/validator/sign-up-apps.png)
+
+
+
+Sign up apps.py
+
+![Sign-up-forms](screenshots/validator/sign-up-forms.png)
+
+Sign up forms.py
+
+![Sign-up-urls](screenshots/validator/sign-up-urls.png)
+
+Sign up urls.py
+
+![Sign-up-views](screenshots/validator/sign-up-views.png)
+
+Sign up views.py
+
+
+
+
 
 
 
