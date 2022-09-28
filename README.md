@@ -167,6 +167,8 @@ If this bug cannot be resolved, I will simply replace with a text fields, althou
 
 - Heroku, github and cloudinary (for deployment)
 
+- Microsoft visual studio code (to work on project while offline)
+
 # Testing
 
 I have completed a seperate test file [here](TESTING.md) which goes through all manual testing completed for this project.
@@ -294,6 +296,86 @@ New post page
 - Errors caused by imported Update view as per above.
 
 Update post page
+
+
+## Deployment
+
+Setting up a new repository on Github:
+1. Log into Github.
+2. In my case, I wanted to build the repository using the one of code institute's templates.
+3. Within the relevent repository I selected "use this template".
+4. Git hub then created the new repository, which could later be linked into Heroku for deployment.
+
+
+The app was deployed to Heroku via Github. The steps to deploy are as follows:
+
+1. Log into Horku and select "new" and then select "Create new app".
+2. Select an app name and region and select "create app".
+3. Select your newly created app from your dashboard and click the settings tab.
+4. Add any config Vars or build packs needed for app, in this case, PORT 8000 config vars and Python and nodejs for  build packs, remembering to ensure Python is your first build pack.
+5. Click the "Deploy" tab and under "Deployment Method" select "Github Pages".
+6. Log into Github and select correct repository to connect to app.
+7. For convenience, I selected "Automatic Deploys" so the app is updated automatically after each push from Gitpod/Visual Studio code.
+
+Making a local clone:
+
+1. Login to gitbub and download github desktop.
+2. Select the correct repository from the dropdown list in the top left.
+3. Secect the 'repository' menu and from it select 'pull'.
+4. Select 'open in visual studio code' from the home screen.
+5. The repository can now be worked on locally, without the need to use gitpod etc.
+
+Forking the repository:
+
+1. Login to Gitbut and select the relevent repository.
+2. At the top the the repository (not page), select settings.
+3. Then select fork. I am currently not able to fork the repository as I own it, but this this the procedure one would normally follow.
+
+## Libraries/resources used
+
+### Bootstrap (version 4.5)
+
+- Bootstrap was used to build the main navbar and site navigation contained in base.html, as well as for buttons and cards, the buttons being useed for form submission and the card being used to display profile info etc.
+
+- This was then customised using css/html for site colours and formatting.
+
+### Ck editor
+
+- As mentioned in the features section, this was used on the create post/edit post pages in order to give the user more editing and feature options when creating a post.
+
+- I hope to be able to impleamant this feature fully for project submission once previously mentioned bug is resolved.
+
+## Credits
+
+
+- ### [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) (link to playlist)
+
+- [Login/out Views tutorial](https://www.youtube.com/watch?v=CTrVDi3tt8o&list=PLvKMZpikrDZrlpSAnZbJR8NUf2Ppjkht2&index=8&t=456s)
+
+- [Channel link](https://www.youtube.com/c/Codemycom) (Codemy.com)
+
+- This playlist and channel was a fantastic guide which assisted me greatly in following the steps required to build codezone. It anabled me to build a basic, but functioning blog, using tools and features, other than that contained within the code institute course cirriculiam. This helps give me a broder experience base for expanding my knowledge of Python, Django, Javascript, CSS and HTML.
+
+- I also used a video from codemy.com to assist in building my login/out view function based view as I had great diffcuulty getting a log in or out success message to display when using class based views.
+
+ [Code institue FST (Full stack frameworks module)](https://codeinstitute.net/ie/)
+
+- I really appreciated the way this module was structued in the sense that it starts you out with the basics of django with the building of a basic task list with no styling, to finally finish with a fully functioning blog which one can then build on.
+
+- I also used this module to assist in laying the ground work for early deployment for this current project, such as getting django installed, and getting Heroku correctly configured.
+
+[Slackoverflow.com](https://stackoverflow.com)
+
+- I used slack overflow countless times to assist in solving the countless errors and bugs I experienced while building this project.
+
+- I very often found that I could literally copy and paste the error I was expreiencing into slack and locate a relevent article to assist.
+
+### Acknowledgements
+
+- My Mentor Dario for his help, advise and patience.
+- The various totors at code institute for their help and patience in helping me build this project.
+- The youtubers and slackoverflowers who take the time to create the videos, wrtite the articles and answer the questions. Without you all, newbies like me, really woue be lost.
+
 
 
 
