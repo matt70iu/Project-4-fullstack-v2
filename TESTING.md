@@ -242,6 +242,14 @@ There was a couple of unexpected issues that came up here.
 
 ![action-not-pernitted](screenshots/action-not-permitted.png)
 
+- I have rectified the issue with the html/<p> tags showing by adding the safe tag to the python code, so the html can be injected into the template.
+
+- I have rectified the issue with the edit/delete options being available to users who did not create the post by adding an additional if and endif statment within the categories template.
+
+![categories-page-bug-fixes](screenshots/categories-page-bug-fixes.png)
+
+- The categories page is now displaying without the option to edit/delete posts which do not belong to the user, as well as no longer displaying the template html tags.
+
 
 
 
