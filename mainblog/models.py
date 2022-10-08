@@ -45,7 +45,7 @@ class Post(models.Model):
         null=True, blank=True, upload_to='media/images')
     title_tag = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    body = RichTextField(blank=True, null=True)
+    body = models.TextField(default='Please enter post here')
     post_date = models.DateField(auto_now_add=True)
     post_time = models.TimeField(auto_now_add=True)
     category = models.CharField(max_length=255, default='coding')

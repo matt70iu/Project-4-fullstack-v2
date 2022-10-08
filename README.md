@@ -141,6 +141,8 @@ In relation to this feature however, I have been experiencing difficulties getti
 
 If this bug cannot be resolved, I will simply replace with a text fields, although, this would be a setback for the project in terms of features.
 
+As I have been unable to reliably resolve this issue with CK editor, I have been forced to remove it from the create/edit posts template.
+
 ### Features for future implementation
 
 - Would like to implement some form of email validation. This could facilitate the launching of a possible news letter, buleton, or something similar in the future.
