@@ -51,11 +51,11 @@ As well as what was included in the youtube tutorials and other reousrses that w
 
 ## Features
 
-The user is greeted with the homepage with the homepage which contains the menu bar which contains a list of categories, while also giving the user the option to register or login.
+The user is greeted with the homepage  which contains the menu bar which contains a list of categories, while also giving the user the option to register or login.
 
 ![Home-page](screenshots/home-page.png)
 
-If the user is not currently registered and wishes to register, they will clock on the register link at the top of the page.
+If the user is not currently registered and wishes to register, they will click on the register link at the top of the page.
 
 The user is then asked to fill in relevent information, for account registration purposes such as username, name, email address and password.
 
@@ -152,6 +152,8 @@ As I have been unable to reliably resolve this issue with CK editor, I have been
 - Allow user to express other opinions rather than just a like an unlike button. Could maybe have a whatsapp/facebook messenger style list of emojis.
 
 - A few visual tweeks to various visual elements of the site such as the view profile page for example, rather than just having a simple rectangle with profile info, round off the photo and improve the layout of the page etc.
+
+- In addition, I would also like to be able to properly implement Ck editor to improve user experience.
 
 ### Technologies Used
 
@@ -347,6 +349,12 @@ Forking the repository:
 
 - I hope to be able to impleamant this feature fully for project submission once previously mentioned bug is resolved.
 
+- As mentioned above, I have had to remove this feature for submission, but hope to resolve rendering issue in the future.
+
+### Content
+
+- All content is for illustrative purposes and was obtained from the code institute course content.
+
 ## Credits
 
 
@@ -366,17 +374,21 @@ Forking the repository:
 
 - I also used this module to assist in laying the ground work for early deployment for this current project, such as getting django installed, and getting Heroku correctly configured.
 
+- In addition, I would also like to be able to properly implement Ck editor to improve user experience.
+
+
 [Slackoverflow.com](https://stackoverflow.com)
 
 - I used slack overflow countless times to assist in solving the countless errors and bugs I experienced while building this project.
 
 - I very often found that I could literally copy and paste the error I was expreiencing into slack and locate a relevent article to assist.
 
+
 ### Acknowledgements
 
 - My Mentor Dario for his help, advise and patience.
 - The various totors at code institute for their help and patience in helping me build this project.
-- The youtubers and slackoverflowers who take the time to create the videos, wrtite the articles and answer the questions. Without you all, newbies like me, really woue be lost.
+- The youtubers and slackoverflowers who take the time to create the videos, wrtite the articles and answer the questions. Without you all, newbies like me, really would be lost.
 
 
 

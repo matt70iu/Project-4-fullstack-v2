@@ -1,35 +1,33 @@
+ /* Main body colour/style */
+
  body {
      background-color: black;
      color: white;
  }
 
-
- footer {
-     background-color: #f57542;
-     position: fixed;
-     bottom: 0;
-     width: 100%;
-     height: 60px;
- }
-
+ /* Link colour/style */
 
  a {
      color: #f57542;
-
  }
+
+ /* Profile card styling */
 
  .card-title {
      color: black;
-
- }
-
- .btn-site-theme {
-     background-color: #f57542;
  }
 
  .card-text {
      color: black;
  }
+
+ /* Site theme button colour */
+
+ .btn-site-theme {
+     background-color: #f57542;
+ }
+
+ /* Main Navbar styling/colour */
 
  #msg {
      background-color: #f57542;
