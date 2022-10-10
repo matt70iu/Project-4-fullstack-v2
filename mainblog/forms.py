@@ -1,6 +1,7 @@
 '''Required imports'''
 from django import forms
 from .models import Post, Category, Comment
+# pylint: disable=no-member
 
 
 choices = Category.objects.all().values_list('name', 'name')

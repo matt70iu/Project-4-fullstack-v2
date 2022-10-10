@@ -8,7 +8,8 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from .models import Post, Category, Comment
 from .forms import PostForm, EditForm, CommentForm
-# pylint: disable=no-member
+# pylint: disable-all
+# flake8: noqa
 
 
 def LikeView(request, pk):

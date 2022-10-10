@@ -11,6 +11,7 @@ from django.urls import reverse_lazy
 from mainblog.models import Profile
 from .forms import RegistrationForm, EditProfileForm, PasswordChangedForm,\
     ProfilePageForm
+# pylint: disable-all
 
 
 def my_login(request):
