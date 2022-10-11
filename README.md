@@ -343,6 +343,8 @@ Forking the repository:
 
 - This was then customised using css/html for site colours and formatting.
 
+- Built in bootstrap javascript was also used to set up timouts for notification messages.
+
 ### Ck editor
 
 - As mentioned in the features section, this was used on the create post/edit post pages in order to give the user more editing and feature options when creating a post.
@@ -356,7 +358,6 @@ Forking the repository:
 - All content is for illustrative purposes and was obtained from the code institute course content.
 
 ## Credits
-
 
 - ### [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) (link to playlist)
 
@@ -375,6 +376,8 @@ Forking the repository:
 - I also used this module to assist in laying the ground work for early deployment for this current project, such as getting django installed, and getting Heroku correctly configured.
 
 - In addition, I would also like to be able to properly implement Ck editor to improve user experience.
+
+- The "messages" video in the " I think therefore I blog" section of the LMS was used to assist me in setting up the timeout script for the notification messages and then customised.
 
 
 [Slackoverflow.com](https://stackoverflow.com)
