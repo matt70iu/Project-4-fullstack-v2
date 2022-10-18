@@ -51,7 +51,7 @@ As well as what was included in the youtube tutorials and other reousrses that w
 
 ## Features
 
-The user is greeted with the homepage  which contains the menu bar which contains a list of categories, while also giving the user the option to register or login.
+The user is greeted with the homepage  which contains the menu bar within which there is a list of categories, while also giving the user the option to register or login.
 
 ![Home-page](screenshots/home-page.png)
 

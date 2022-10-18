@@ -250,6 +250,19 @@ There was a couple of unexpected issues that came up here.
 
 - The categories page is now displaying without the option to edit/delete posts which do not belong to the user, as well as no longer displaying the template html tags.
 
+## Authentication
+
+
+The purpose of this thest is to ensure that a logged in user can only access pages they are permitted to and are presented with an error, should they try to access pages for which they have not been authenicated.
+
+- When logged in as Matthew Adams, if i attempt to acces the page to delete the post, I am presented with the below error:
+
+![auth-testing](screenshots/auth-testing.png)
+
+- I can confirm after this test, that the app behaved as expected.
+
+
+
 
 
 
